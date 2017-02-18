@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Kano', 'Gill Sans', sans-serif;
+    color: #143050;
+    letter-spacing: 2px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.container {
+    height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.left {
+    float: left;
+    width: 50%;
+}
+
+.right {
+    float: right;
+    -webkit-flex: 1;
+            flex: 1;
+}
+
+.quarter {
+    height: 50%;
+}
+
+.top {
+  font-size: 3vw;
+}
+
+.centre-align {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#qrcode {
+    height: 100%;
+}
+
+#qrcode > img {
+    width: 40vw;
+}
+
+.bt-icon {
+    width: 10vw;
+    fill: #143050;
+}
+
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+.blink {
+    -moz-animation: blink normal 4s infinite ease-in-out; /* Firefox */
+    -webkit-animation: blink normal 4s infinite ease-in-out; /* Webkit */
+    -ms-animation: blink normal 4s infinite ease-in-out; /* IE */
+    animation: blink normal 4s infinite ease-in-out; /* Opera and prob css3 final iteration */
+}
+
+.cubes {
+  background-color: #faf7f3; /* Left face */
+  background-image: linear-gradient(30deg, #d5e1e8 12%, transparent 12.5%, transparent 87%, #d5e1e8 87.5%, #d5e1e8),
+  linear-gradient(150deg, #d5e1e8 12%, transparent 12.5%, transparent 87%, #d5e1e8 87.5%, #d5e1e8),
+  linear-gradient(30deg, #d5e1e8 12%, transparent 12.5%, transparent 87%, #d5e1e8 87.5%, #d5e1e8),
+  linear-gradient(150deg, #d5e1e8 12%, transparent 12.5%, transparent 87%, #d5e1e8 87.5%, #d5e1e8),
+  linear-gradient(60deg, #c5dee7 25%, transparent 25.5%, transparent 75%, #c5dee7 75%, #c5dee7),
+  linear-gradient(60deg, #c5dee7 25%, transparent 25.5%, transparent 75%, #c5dee7 75%, #c5dee7);
+  background-size:80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+/* Colours */
+
+.sky-blue {
+    background: #d5e1e8;
+}
+.off-white {
+    background: #faf7f3;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Kano';
+    src: url('../font/Kano.woff') format('woff');
+}

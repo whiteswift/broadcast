@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Broadcast</title>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='left'>
+        <div class='top quarter centre-align sky-blue'>
+          <span id='tinyUrl'></span>
+        </div>
+        <div class='bottom quarter centre-align cubes'>
+          <h1>Bluetooth Beacon</h1>
+          <img src="/images/bluetooth.svg" class='bt-icon blink'/>
+        </div>
+      </div>
+      <div class='right'>
+        <div id='qrcode' class='centre-align'></div>
+      </div>
+    </div>
+
+
+    <script src="/js/qrcode.min.js"></script>
+    <script type='text/javascript'>
+    // CHEATING 🍆
+    const tiniedURL = 'https://tinyurl.com/zaetwsk';
+
+    function startup() {
+      outputTinyUrl();
+    }
+
+    let qRdimention = (window.innerWidth/2)*0.8
+    var qrcode = new QRCode(document.getElementById('qrcode'), {
+        text: tiniedURL,
+        width: qRdimention,
+        height: qRdimention,
+        colorDark : '#143050',
+        colorLight : '#ffffff',
+        correctLevel : QRCode.CorrectLevel.H
+    });
+
+    function outputTinyUrl() {
+
+      // TINIED URL - CHEATING!
+      document.getElementById('tinyUrl').innerHTML = tiniedURL;
+
+      // let apiUrl = 'http://tiny-url.info/api/v1/create';
+      // let url = 'https://faculty.washington.edu/jtenenbg/courses/360/f04/sessions/schneidermanGoldenRules.html';
+      // let headers = new Headers();
+      // headers.append("Access-Control-Allow-Origin", '*');
+
+      // let formData = new FormData();
+      // formData.append('apikey', 'D868AFBDFA0A0AB809');
+      // formData.append('format', 'json');
+      // formData.append('provider', 'tinyurl_com');
+      // formData.append('url', url);
+
+      // let options = {
+      //   method: 'POST',
+      //   body: formData,
+      //   headers: headers,
+      //   mode: 'cors'
+      // };
+
+      // fetch(apiUrl, options)
+      //   .then((response) => {
+      //     if (response.status !== '200') {
+      //       console.log('fetch failed');
+      //     }
+
+      //     response.text()
+      //       .then((text) => {
+      //         console.log('text: ', text);
+      //         document.getElementById('tinyUrl').innerHTML = text;
+      //       })
+      //   })
+    }
+
+    document.addEventListener("DOMContentLoaded", startup, false);
+    </script>
+    <link rel='stylesheet' type='text/css' href='/css/broadcast.css' async defer/>
+  </body>
+</html>
