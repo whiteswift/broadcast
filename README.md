@@ -1,7 +1,7 @@
 # Broadcast
 Broadcast a URL by bluetooth beacon, QR code and tinyURL.
 
-![alt text](https://github.com/whiteswift/broadcast/blob/master/images/broadcast_screen.png "Broadcast page")
+![alt text](https://raw.githubusercontent.com/whiteswift/broadcast/master/images/broadcast_screen.png "Broadcast page")
 
 ## Install
 
