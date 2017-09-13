@@ -26,8 +26,9 @@ http.listen(config.PORT, () => {
   console.log('server listening on port : ' + config.PORT)
 })
 
-const tiniedURL = 'https://tinyurl.com/zaetwsk';
+const polymer2017Url = 'https://goo.gl/auFzVP'
+const tiniedUrl = 'https://tinyurl.com/zaetwsk';
 
-eddystoneBeacon.advertiseUrl(tiniedURL, [beaconConfig]);
-console.log('Broadcasting:', tiniedURL);
+eddystoneBeacon.advertiseUrl(polymer2017Url, [beaconConfig]);
+console.log('Broadcasting:', polymer2017Url);
 console.log('NB: Make sure your bluetooth adapter is switched on 😚');
