@@ -7,7 +7,7 @@
     <div class='container'>
       <div class='left'>
         <div class='top quarter centre-align sky-blue'>
-          <span id='tinyUrl'></span>
+          <span><a id='tinyUrl' href="https://tinyurl.com/zaetwsk">https://tinyurl.com/zaetwsk</a></span>
         </div>
         <div class='bottom quarter centre-align cubes'>
           <h1>Bluetooth Beacon</h1>
@@ -19,14 +19,13 @@
       </div>
     </div>
 
-
     <script src="/js/qrcode.min.js"></script>
     <script type='text/javascript'>
     // CHEATING 🍆
     const tiniedURL = 'https://tinyurl.com/zaetwsk';
 
     function startup() {
-      outputTinyUrl();
+      setUrl(tiniedURL);
     }
 
     let qRdimention = (window.innerWidth/2)*0.8
@@ -39,41 +38,9 @@
         correctLevel : QRCode.CorrectLevel.H
     });
 
-    function outputTinyUrl() {
-
-      // TINIED URL - CHEATING!
-      document.getElementById('tinyUrl').innerHTML = tiniedURL;
-
-      // let apiUrl = 'http://tiny-url.info/api/v1/create';
-      // let url = 'https://faculty.washington.edu/jtenenbg/courses/360/f04/sessions/schneidermanGoldenRules.html';
-      // let headers = new Headers();
-      // headers.append("Access-Control-Allow-Origin", '*');
-
-      // let formData = new FormData();
-      // formData.append('apikey', 'D868AFBDFA0A0AB809');
-      // formData.append('format', 'json');
-      // formData.append('provider', 'tinyurl_com');
-      // formData.append('url', url);
-
-      // let options = {
-      //   method: 'POST',
-      //   body: formData,
-      //   headers: headers,
-      //   mode: 'cors'
-      // };
-
-      // fetch(apiUrl, options)
-      //   .then((response) => {
-      //     if (response.status !== '200') {
-      //       console.log('fetch failed');
-      //     }
-
-      //     response.text()
-      //       .then((text) => {
-      //         console.log('text: ', text);
-      //         document.getElementById('tinyUrl').innerHTML = text;
-      //       })
-      //   })
+    function setUrl(url) {
+      // TODO: do this all server side
+      document.getElementById('tinyUrl').innerHTML = url;
     }
 
     document.addEventListener("DOMContentLoaded", startup, false);
