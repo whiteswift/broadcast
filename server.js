@@ -18,8 +18,7 @@ app.get('/', (req, res) => {
   // Get url from req object?
   // console.log(req);
   // let urlToTiny = req.query.url;
-
-
+  
   const tiniedURL = 'https://tinyurl.com/zaetwsk';
 
   eddystoneBeacon.advertiseUrl(tiniedURL, [beaconConfig]);
