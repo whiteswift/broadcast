@@ -1,14 +1,16 @@
-const express = require('express')
-const app = express()
-const http = require('http').Server(app)
-const path = require('path')
-const config = require('./config/config')
-const beaconConfig = require('./config/beaconConfig')
+const express = require('express');
+const compression = require('compression');
+const app = express();
+const http = require('http').Server(app);
+const path = require('path');
+const config = require('./config/config');
+const beaconConfig = require('./config/beaconConfig');
 const eddystoneBeacon = require('eddystone-beacon');
 
 const tiniedURL = 'https://tinyurl.com/zaetwsk';
 
 app.use(express.static('assets'));
+app.use(compression());
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -22,7 +24,7 @@ app.get('/', (req, res) => {
 })
 
 http.listen(config.PORT, () => {
-  console.log('server listening on port : ' + config.PORT)
+  console.log('Broadcast server is listening on port : ' + config.PORT)
 })
 
 eddystoneBeacon.advertiseUrl(tiniedURL, [beaconConfig]);

@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Broadcast a URL by bluetooth beacon, QR code and tinyURL.",
   "main": "server.js",
-  "dependencies": {
+  "devDependencies": {
     "eddystone-beacon": "^1.0.7",
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "compression": "^1.7.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "npm test",
     "start": "node server.js"

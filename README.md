@@ -5,11 +5,11 @@ Broadcast a URL by bluetooth beacon, QR code and tinyURL.
 
 ## Install
 
-`npm install`
+`yarn install`
 
 ## Run
 
-`npm start`
+`yarn start`
 
 ### Validate your URL before broadcasting
 

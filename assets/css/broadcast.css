@@ -6,12 +6,14 @@ body {
     background: white;
     color: #143050;
     letter-spacing: 2px;
+    font-weight: 400;
 }
 a {
     color: #143050;
 }
 h1 {
     text-transform: uppercase;
+    font-weight: normal;
 }
 .container {
     height: 100vh;
@@ -88,5 +90,6 @@ h1 {
 @font-face {
     font-family: 'Kano';
     src: url('../fonts/Kano.woff2') format('woff2');
+    font-weight: normal;
     font-display: swap;
 }
